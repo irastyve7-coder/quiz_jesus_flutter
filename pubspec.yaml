@@ -1,0 +1,38 @@
+name: quiz_jesus
+description: "Quiz Jésus – application éducative sur la vie de Jésus."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  audioplayers: ^6.0.0      # jouer les sons
+  url_launcher: ^6.1.10     # ouvrir les liens vers la Bible
+  webview_flutter: ^4.8.0   # version stable compatible
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1  # pour générer l'icône de l'application
+
+# Configuration pour l'icône de l'application
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/logo_apk.png"
+  android_round: true       # 🔹 génère ic_launcher_round.png
+  remove_alpha_ios: true    # 🔹 option sûre pour Android
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/sounds/correct.mp3
+    - assets/sounds/wrong.mp3
+
